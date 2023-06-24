@@ -8,6 +8,14 @@
 	min-height: 100vh;
 	transition: all 0.3s linear;
 
+	&.hidden {
+		display: none;
+	}
+
+	&.visible {
+		display: flex;
+	}
+
 	&-close {
 		position: absolute;
 		right: 0;

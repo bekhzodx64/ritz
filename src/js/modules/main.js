@@ -8,27 +8,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Модальное окно
 	const modal = document.querySelector('.modal')
-	const modalContent = document.querySelector('.modal-content')
 	const openModalBtn = document.querySelector('.brochure-button')
 	const closeModalBtn = document.querySelector('.modal-close')
 
 	const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-	const openModal = async () => {
-		modal.style.opacity = '0'
-		modal.style.display = 'flex'
-		await wait(50)
-		modal.style.opacity = '1'
+	// TOOD: style togirlash kk
+	const toggleModal = async () => {
+		if (modal.style.display === 'none') {
+			modal.style.opacity = '0'
+			modal.style.display = 'flex'
+			await wait(50)
+			modal.style.opacity = '1'
+		} else {
+			modal.style.opacity = '0'
+			await wait(500)
+			modal.style.display = 'none'
+		}
 	}
 
-	const closeModal = async () => {
-		modal.style.opacity = '0'
-		await wait(500)
-		modal.style.display = 'none'
-	}
-
-	openModalBtn.onclick = openModal
-	closeModalBtn.onclick = closeModal
+	openModalBtn.onclick = toggleModal
+	closeModalBtn.onclick = toggleModal
 
 	// Photo Sphere viewer
 	// new PhotoSphereViewer.Viewer({
@@ -38,14 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Viewer Buttons
 	const viewerButtons = document.querySelectorAll('.viewer-button')
+	const viewerModal = document.querySelector('.viewer')
+	const closeViewerButton = document.querySelector('.viewer-close')
 
-	const image1 = '../../img/sphere-images/1.jpg'
-	const image2 = '../../img/sphere-images/2.jpg'
-	const image3 = '../../img/sphere-images/3.jpg'
-	const image4 = '../../img/sphere-images/4.jpg'
-	const image5 = '../../img/sphere-images/5.jpg'
+	const toggleViewerModal = async () => {
+		if (viewerModal.style.display === 'none') {
+			viewerModal.style.opacity = '0'
+			viewerModal.style.display = 'flex'
+			await wait(50)
+			viewerModal.style.opacity = '1'
+		} else {
+			viewerModal.style.opacity = '0'
+			await wait(500)
+			viewerModal.style.display = 'none'
+		}
+	}
+
+	// const image1 = '../../img/sphere-images/1.jpg'
+	// const image2 = '../../img/sphere-images/2.jpg'
+	// const image3 = '../../img/sphere-images/3.jpg'
+	// const image4 = '../../img/sphere-images/4.jpg'
+	// const image5 = '../../img/sphere-images/5.jpg'
 
 	viewerButtons.forEach((button) => {
-		button.onclick = openModal
+		button.onclick = toggleViewerModal
 	})
+
+	closeViewerButton.onclick = toggleViewerModal
 })
