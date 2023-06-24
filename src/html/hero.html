@@ -1,0 +1,161 @@
+<div class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__main">
+        @@include('./theme.html', { })
+        <a href="/">
+          <div class="hero__main__banner">
+            <div class="hero__main__banner-img-wrapper">
+              <img
+                class="hero__main__banner-img"
+                src="../img/hero-banner.jpeg"
+                alt="hero banner"
+                width="746"
+                height="420"
+              />
+            </div>
+            <div class="hero__main__banner-info">
+              <h2 class="hero__main__banner-title">
+                Зилзила ғулғуласи, Тошкентга янги ҳоким, “Ўзавто”га эски раис —
+                ҳафта дайжести
+              </h2>
+              <p class="hero__main__banner-text">
+                “Ўзбекистон темир йўллари” қураётган кўприк қулади. “Шапка”лар
+                даврида “Ўзавтосаноат”ни бошқарган, кейин танқидлар билан
+                “Ўзбекистон ҳаво йўллари” раҳбарлигидан олинган мансабдор яна
+                қайтиб “Ўзавтосаноат”га раис бўлди.
+              </p>
+              @@include('./status.html', {time: "12:44/28.03.2023",type: "red",
+              title: "Ўзбекистон"})
+            </div>
+          </div>
+        </a>
+        <div class="hero__main__news">
+          <ul class="hero__main__news-list">
+            <li class="card-item hero-card">
+              <a href="/">
+                <img
+                  src="../img/activist.jpg"
+                  alt="hero main images"
+                  class="card-img"
+                  width="355"
+                  height="199"
+                />
+
+                <h3 class="card-title">
+                  “Терпила” эмас, яхши ўзгаришлар сабабчиси – Activist
+                </h3>
+                <div class="card-status-wrapper">
+                  @@include('./status.html', {title: "Jahon", type: "red", time:
+                  "12:44/28.03.2023"})
+                </div>
+              </a>
+            </li>
+            <li class="card-item hero-card">
+              <a href="/">
+                <img
+                  src="../img/open-budget.jpg"
+                  alt="hero main image"
+                  class="card-img"
+                  width="355"
+                  height="199"
+                />
+
+                <h3 class="card-title">
+                  «Ташаббусли бюджет»да авж палла: қинғирликлар ва ислоҳот
+                  зарурияти
+                </h3>
+                <div class="card-status-wrapper">
+                  @@include('./status.html', {title: "Jahon", type: "red", time:
+                  "12:44/28.03.2023"})
+                </div>
+              </a>
+            </li>
+            <li class="card-item hero-card">
+              <a href="/">
+                <img
+                  src="../img/president.jpg"
+                  alt="hero main images"
+                  class="card-img"
+                  width="355"
+                  height="199"
+                />
+
+                <h3 class="card-title">
+                  Зеленский қарши ҳужум кечиктирилишини айтди. Аслида гап
+                  нимада?
+                </h3>
+                <div class="card-status-wrapper">
+                  @@include('./status.html', {title: "Jahon", type: "red", time:
+                  "12:44/28.03.2023"})
+                </div>
+              </a>
+            </li>
+            <li class="card-item hero-card">
+              <a href="/">
+                <img
+                  src="../img/elchi.jpg"
+                  alt="thero main image"
+                  class="card-img"
+                  width="355"
+                  height="199"
+                />
+
+                <h3 class="card-title">
+                  Фурқат Сиддиқов Ўзбекистоннинг АҚШдаги элчиси сифатида иш
+                  бошлади
+                </h3>
+                <div class="card-status-wrapper">
+                  @@include('./status.html', {title: "Jahon", type: "red", time:
+                  "12:44/28.03.2023"})
+                </div>
+              </a>
+            </li>
+            <li class="card-item hero-card">
+              <a href="/">
+                <img
+                  src="../img/war.jpg"
+                  alt="hero main images"
+                  class="card-img"
+                  width="355"
+                  height="199"
+                />
+
+                <h3 class="card-title">
+                  ISW «вагнерчилар» Бахмут марказини эгаллаб олганини тасдиқлади
+                </h3>
+                <div class="card-status-wrapper">
+                  @@include('./status.html', {title: "Jahon", type: "red", time:
+                  "12:44/28.03.2023"})
+                </div>
+              </a>
+            </li>
+            <li class="card-item hero-card">
+              <a href="/">
+                <img
+                  src="../img/jurnalist.jpg"
+                  alt="hero main images"
+                  class="card-img"
+                  width="355"
+                  height="199"
+                />
+
+                <h3 class="card-title">
+                  WSJ журналисти ҳимояси унинг ҳибсга олиниши устидан шикоят
+                  қилди
+                </h3>
+                <div class="card-status-wrapper">
+                  @@include('./status.html', {title: "Jahon", type: "red", time:
+                  "12:44/28.03.2023"})
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero__news">
+        @@include('./transfer.html') @@include('./news.html')
+      </div>
+    </div>
+  </div>
+</div>

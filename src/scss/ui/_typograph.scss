@@ -1,0 +1,46 @@
+.museo {
+  &-nav {
+    &-title {
+      font-family: Museo, sans-serif;
+      @include font(var(--museo-nav-title), 18px, 120%, 700);
+      @include xxl {
+        @include font(var(--museo-nav-title), 16px, 120%, 700);
+      }
+      @include xl {
+        @include font(var(--museo-nav-title), 14px, 120%, 700);
+      }
+      @include lg {
+        @include font(var(--museo-nav-title), 12px, 120%, 700);
+      }
+    }
+
+    &-text {
+      font-family: Museo, sans-serif;
+      @include font(var(--museo-nav-title), 16px, 120%, 400);
+      @include xxl {
+        @include font(var(--museo-nav-title), 14px, 120%, 400);
+      }
+      @include xl {
+        @include font(var(--museo-nav-title), 12px, 120%, 400);
+      }
+      @include lg {
+        @include font(var(--museo-nav-title), 10px, 120%, 400);
+      }
+    }
+  }
+}
+
+//dark mode
+
+body.dark {
+  .museo {
+    &-nav {
+      &-title {
+        color: var(--museo-nav-title);
+      }
+      &-text {
+        color: var(--museo-nav-title);
+      }
+    }
+  }
+}

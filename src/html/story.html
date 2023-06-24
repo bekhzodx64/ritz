@@ -1,0 +1,26 @@
+<section class="article">
+  <div class="container">
+    <div class="article__inner">
+      @@include('./title.html', { title: "Ҳаётий ҳикоялар", hasLink: "true",
+      link: "#", linkTitle: "Барча мақолалар" })
+      <ul class="article__list">
+        @@for (var i = 8; i > 0; i--) {
+        <li class="article__item">
+          <img
+            src="../img/childrens.jpeg"
+            alt="childrens image"
+            class="article__img"
+            width="364"
+            height="204"
+          />
+          <time class="story__time">18:14 / 29.03.2023</time>
+          <h4 class="article__title">
+            Тўқув дастгоҳлари ишлаб чиқаришдан автомобилсозликкача: жаҳонга
+            машҳур Toyota қандай ривожланганди?
+          </h4>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

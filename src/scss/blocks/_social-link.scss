@@ -1,0 +1,73 @@
+.about__social {
+  &-list {
+    margin-bottom: 72px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    padding-right: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+
+  &-logo {
+    margin-right: 16px;
+
+    @include lg {
+      width: 45px;
+      height: 45px;
+      margin-right: 6px;
+    }
+  }
+
+  &-profile {
+    margin-right: 5px;
+
+    h4 {
+      display: flex;
+      align-items: center;
+      @include font(var(--social-item-bg), 24px, 29px, 600, 8px);
+
+      @include lg {
+        @include font(var(--social-item-bg), 20px, 24px, 600, 4px);
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+
+        @include lg {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    p {
+      @include font(var(--card-title), 16px, 20px, 300, 0);
+
+      @include lg {
+        @include font(var(--card-title), 12px, 16px, 300, 0);
+      }
+    }
+  }
+
+  &-link {
+    margin-left: auto;
+    padding: 16px 38px;
+    background-color: var(--social-connect);
+    border-radius: 10px;
+    white-space: nowrap;
+    @include font(var(--card-title), 16px, 24px, 600, 0);
+
+    @include lg {
+      padding: 12px 30px;
+      @include font(var(--card-title), 14px, 20px, 600, 0);
+    }
+  }
+}

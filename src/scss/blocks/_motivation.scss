@@ -1,0 +1,132 @@
+.motivation {
+  height: 591px;
+  margin-top: 56px;
+  background-color: var(--section-bg);
+  background-image: url("../../img/motivation-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    padding: 48px 0;
+  }
+
+  &__title-wrapper {
+    @include flex(row, center, flex-start, nowrap, flex);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  &__top-title {
+    @include font(#ffffff, 22px, 26px, 600, 0);
+    letter-spacing: -0.01em;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+
+  &__item {
+    position: relative;
+    @include flex(column, stretch, flex-start, nowrap, flex);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -24px;
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+      content: "";
+      background-color: var(--white);
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__time {
+    @include font(rgba(255, 255, 255, 0.4), 16px, 20px, 300, 16px);
+    letter-spacing: -0.02em;
+    opacity: 0.4;
+  }
+
+  &__title {
+    font-family: "Noto";
+    @include font(#ffffff, 20px, 150%, 600, 0);
+    letter-spacing: -0.01em;
+  }
+}
+
+@include xl {
+  .motivation {
+    margin-top: 40px;
+
+    &__inner {
+      padding: 40px 0;
+    }
+
+    &__list {
+      gap: 40px;
+    }
+
+    &__item {
+      &::after {
+        right: -20px;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    &__time {
+      @include font(var(--white), 14px, 18px, 300, 14px);
+    }
+
+    &__title {
+      @include font(var(--white), 18px, 140%, 600, 0);
+    }
+  }
+}
+
+@include lg {
+  .motivation {
+    margin-top: 36px;
+
+    &__inner {
+      padding: 36px 0;
+    }
+
+    &__list {
+      gap: 36px;
+    }
+
+    &__item {
+      &::after {
+        right: -18px;
+      }
+    }
+
+    &__img {
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      @include font(var(--white), 16px, 120%, 600, 0);
+    }
+  }
+}
+
+.turkiye {
+  height: 591px;
+}

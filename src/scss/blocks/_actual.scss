@@ -1,0 +1,155 @@
+.actual {
+  margin-top: 56px;
+
+  &__title-wrapper {
+    margin-bottom: 0;
+    margin-top: 56px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__inner {
+    margin-top: 32px;
+  }
+
+  &__top-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__top-item {
+    padding-bottom: 40px;
+    padding-left: 24px;
+    border-bottom: 1px solid var(--transfer-border);
+    border-left: 1px solid var(--transfer-border);
+
+    &:first-child {
+      padding-left: 0;
+      padding-right: 24px;
+      border-left: 0;
+    }
+  }
+
+  &__top-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  &__top-title {
+    margin-top: 16px;
+    font-family: "Noto";
+    @include font(var(--card-title), 28px, 135%, 700, 16px);
+  }
+
+  &__top-text {
+    @include font(var(--card-title), 15px, 155%, 300, 0);
+    opacity: 0.66;
+  }
+
+  &__bottom-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 56px;
+  }
+
+  &__bottom-item {
+    padding: 24px 24px 0;
+    border-left: 1px solid var(--transfer-border);
+
+    &:first-child {
+      // padding-left: 0;
+      border-left: none;
+    }
+
+    &:last-child {
+      // padding-right: 0;
+    }
+  }
+
+  &__bottom-img {
+    margin-bottom: 20px;
+  }
+
+  &__bottom-title {
+    margin-top: 16px;
+  }
+}
+
+@include xl {
+  .actual {
+    &__title-wrapper {
+      margin-top: 40px;
+    }
+
+    &__inner {
+      margin-top: 26px;
+    }
+
+    &__top-item {
+      padding-bottom: 30px;
+    }
+
+    &__top-img {
+      margin-bottom: 16px;
+    }
+
+    &__top-title {
+      margin-top: 14px;
+      @include font(var(--card-title), 24px, 120%, 700, 14px);
+    }
+
+    &__top-text {
+      @include font(var(--card-title), 14px, 140%, 300, 0);
+      opacity: 0.66;
+    }
+
+    &__bottom-list {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include lg {
+  .actual {
+    &__title-wrapper {
+      margin-top: 36px;
+    }
+
+    &__inner {
+      margin-top: 24px;
+    }
+
+    &__top-item {
+      padding-bottom: 28px;
+    }
+
+    &__top-title {
+      margin-top: 14px;
+      @include font(var(--card-title), 22px, 120%, 700, 12px);
+    }
+
+    &__top-text {
+      @include font(var(--card-title), 12px, 140%, 300, 0);
+    }
+
+    &__bottom-list {
+      margin-bottom: 36px;
+    }
+
+    &__bottom-item {
+      padding: 20px 20px 0;
+      border-left: 1px solid var(--transfer-border);
+    }
+
+    &__bottom-img {
+      margin-bottom: 16px;
+    }
+
+    &__bottom-title {
+      margin-top: 14px;
+    }
+  }
+}

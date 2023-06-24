@@ -1,0 +1,94 @@
+.team {
+  padding: 48px 0 80px 0;
+  &__title {
+    @include font(var(--card-title), 36px, 47px, 700);
+    padding-bottom: 28px;
+
+    @include xl {
+      @include font(var(--card-title), 30px, 42px, 700);
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  &__item {
+    position: relative;
+    padding: 16px 20px;
+    display: flex;
+    gap: 20px;
+    background-color: var(--white);
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-img {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+
+      @include xl {
+        width: 105px;
+        height: 105px;
+      }
+    }
+
+    &-text {
+      opacity: 0.6;
+      @include font(var(--card-title), 15px, 18px, 400);
+
+      @include xl {
+        @include font(var(--card-title), 13px, 15px, 400, 4px);
+      }
+    }
+
+    &-name {
+      font-family: var(--font-family-noto);
+      @include font(var(--card-title), 20px, 27px, 700, 8px);
+
+      @include xl {
+        @include font(var(--card-title), 18px, 24px, 700, 6px);
+      }
+    }
+
+    &-socials {
+      display: flex;
+      gap: 8px;
+    }
+
+    &-social {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #f6f7f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      &-link {
+        img {
+          width: 18px;
+          height: 18px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  .team {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}

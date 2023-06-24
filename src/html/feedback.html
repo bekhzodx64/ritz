@@ -1,0 +1,49 @@
+<section class="feedback">
+  <div class="container">
+    <div class="feedback__inner">
+      @@include('./title.html', { hasLink: "false", class:
+      "feedback__title-wrapper", title: "Нуқтаи назар" })
+      <!-- <div class="news__title-wrapper feedback__title-wrapper">
+        <img
+          class="news__title-icon"
+          src="../img/icons/blue-circle.svg"
+          alt="blue circle"
+          width="12"
+          height="12"
+        />
+        <h3 class="news__main-title actual__title">Нуқтаи назар</h3>
+      </div> -->
+      <ul class="feedback__list">
+        @@for (var i = 0; i < 4; i++) {
+        <li class="feedback__item">
+          <img
+            src="../img/icons/quote.svg"
+            alt="quote image"
+            class="feedback__quote"
+            width="80"
+            height="56"
+          />
+          <div class="feedback__top">
+            <img
+              src="../img/kamoliddin.png"
+              alt="feedback person image"
+              class="feedback__top-img"
+              width="64"
+              height="64"
+            />
+            <div class="feedback__top-info">
+              <h4 class="feedback__top-title">Камолиддин Раббимов</h4>
+              <p class="feedback__top-position">Журналист, блогер</p>
+            </div>
+          </div>
+          <blockquote class="feedback__description">
+            Демократия учун саммитнинг мақсади нима? Ўзбекистон қачон қатнаша
+            олади?
+          </blockquote>
+          <time class="feedback__time">18:14 / 29.03.2023</time>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+.brochure {
+	margin-top: auto;
+	padding-bottom: 64px;
+	padding-left: 50px;
+
+	&-button {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		border: none;
+		background-color: #000;
+		text-transform: uppercase;
+		color: #ffffff;
+		cursor: pointer;
+		padding: 6px 30px;
+		user-select: none;
+	}
+}

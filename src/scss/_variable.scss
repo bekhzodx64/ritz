@@ -1,0 +1,165 @@
+/* VARIABLES */
+
+// sizes
+$xxs: 400px;
+$xs: 567px;
+$sm: 767px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1400px;
+$xxl: 1600px;
+$xxxl: 1800px;
+
+:root {
+  --font-family-noto: "Noto", sans-serif;
+  --main-font-family: Museo, sans-serif;
+  --main-text-color: #33323d;
+  --main-bg-color: #f7f7f7;
+  --main-font-size: 16px;
+  --main-font-weight: 400;
+  --main-line-height: 30px;
+  --museo-nav-title: #242833;
+  --footer-color: #e1e1e1;
+  --footer-border-color: #b6bbc5;
+  --footer-top-nav: #0b0b0b;
+  --video-content-bg: #2d2d2d;
+  --footer-bottom-text: rgba(0, 0, 0, 0.65);
+  --footer-bottom-app-title: #0b0b0b;
+  --footer-bottom-apps-title: #0b0b0b;
+  --footer-icon: #0b0b0b;
+  --white: #fff;
+  --day-theme__info-title: #cc0000;
+  --day-theme__info-time: #222124;
+  --orange: #e94b35;
+  --yellow: #f5d970;
+  --status-time: #828282;
+  --hero-banner: #0c2f75;
+  --card-title: #242833;
+  --transfer-border: #e3e3e3;
+  --transfer-currency: #242833;
+  --transfer-green: #5aba61;
+  --transfer-red: #e31e24;
+  --transfer-current: #242833;
+  --tab-bg: #e6e6e6;
+  --input-border: #ebebeb;
+  --news-btn: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) -70.42%,
+    #ffffff 64.97%
+  );
+  --language-list-shadow: 0px 4px 16px rgba(188, 193, 198, 0.14);
+  --alert-bg: #f9f9f9;
+  --black: #000000;
+  --black-text: #000000;
+  --bold-text: #0c2f75;
+  --blockquote-bg: #fbfbfb;
+  --blockquote-border: #242833;
+  --pages-opacity: 1;
+  --news-btn-shadow: 0px 3px 30px rgba(0, 0, 0, 0.15);
+  --editor-link: #0038d1;
+  --article-text: #a5a5a5;
+  --article-btn-bg: #e8e8e8;
+  --article-border: #efefef;
+  --advertising-text: #17206a;
+  --advertising-app-text: #111827;
+  --section-bg: #0c2f750f;
+  --white-section-bg: #ffffff;
+  --swiper-btn: rgba(36, 40, 51, 0.05);
+  --video-mask: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  --interview-link: #4267e6;
+  --interview-card: #ffffff;
+  --interview-play-btn: rgba(255, 255, 255, 0.2);
+  --primary-white: #fff;
+  --mode-bg: #f8f8f8;
+  --mode-active-bg: #0c2f75;
+  --input-search: url("../img/search.svg");
+  --input-header-placeholder: rgba(0, 0, 0, 0.2);
+  --lang-bg-img: url("../img/icons/language.svg");
+  --sun-bg-img: url("../img/icons/light-filled.svg");
+  --moon-bg-img: url("../img/icons/moon.svg");
+  --region-color: rgba(36, 40, 51, 0.4);
+  --burger-bg-img: url("../img/icons/burger.svg");
+  --border-secondary: #87878759;
+  --border-transparent: transparent;
+  --border-primary: #f1f1f1;
+  --border-darker: #e3e3e3;
+  --bg-currency: #f8f8f8;
+  --tag-bg: #f4f4f5;
+  --tab-actve-color: #0c2f75;
+  --shadow: linear-gradient(360deg, #ffffff 30%, rgba(255, 255, 255, 0) 100%);
+  --social-item-bg: #181e32;
+  --social-connect: #e8e8e8;
+  --linear-bg: linear-gradient(105.41deg, #17206a 0%, #000f8c 100%);
+  --load-icon: #28303f;
+  --input-bg: #ffffff;
+  --download-bg: #f5f5f5;
+  --file-upload-text: #71737a;
+  --vacancy-submit-btn-bg: #0c2f75;
+  --vacancy-submit-btn-color: #ffffff;
+  --form-border-color: #e1e0e6;
+}
+
+body.dark {
+  --main-bg-color: #0b0b0b;
+  --white: #2d2d2d;
+  --museo-nav-title: #fff;
+  --primary-white: #0b0b0b;
+  --input-border: rgba(135, 135, 135, 0.35);
+  --mode-bg: #2d2d2d;
+  --card-title: #fff;
+  --download-bg: #0b0b0b;
+  --mode-active-bg: #0b0b0b;
+  --input-search: url("../img/search-dark.svg");
+  --input-header-placeholder: rgba(255, 255, 255, 0.35);
+  --lang-bg-img: url("../img/icons/language-dark.svg");
+  --region-color: rgba(255, 255, 255, 0.65);
+  --advertising-text: #ffffff;
+  --advertising-app-text: #ffffff;
+  --article-btn-bg: #222222;
+  --article-border: #2d2d2d;
+  --alert-bg: #262626;
+  --burger-bg-img: url("../img/icons/burger-dark.svg");
+  --day-theme__info-time: #fff;
+  --border-primary: rgba(135, 135, 135, 0.35);
+  --border-transparent: #878787;
+  --border-darker: #87878759;
+  --bg-currency: transparent;
+  --bold-text: #ffffff;
+  --black-text: #ffffff;
+  --blockquote-bg: #2d2d2d;
+  --blockquote-border: rgba(255, 255, 255, 0.1);
+  --pages-opacity: 0.1;
+  --news-btn: linear-gradient(
+    180deg,
+    rgba(45, 45, 45, 0) -70.42%,
+    #2d2d2d 64.97%
+  );
+  --editor-link: #5177ff;
+  --transfer-border: rgba(135, 135, 135, 0.35);
+  --tag-bg: #2d2d2d;
+  --section-bg: #151515;
+  --white-section-bg: #151515;
+  --interview-card: #373737;
+  --tab-actve-color: white;
+  --tab-bg: #222222;
+  --shadow: linear-gradient(360deg, #2d2d2d 0%, rgba(45, 45, 45, 0) 100%);
+  --footer-color: rgba(21, 21, 21, 0.6);
+  --footer-top-nav: rgba(255, 255, 255, 0.8);
+  --footer-bottom-text: rgba(255, 255, 255, 0.8);
+  --footer-bottom-app-title: rgba(255, 255, 255, 0.8);
+  --footer-icon: rgba(255, 255, 255, 1);
+  --social-item-bg: #ffffff;
+  --social-connect: #0b0b0b;
+  --linear-bg: #151515;
+  --load-icon: #ffffff;
+  --language-list-shadow: 0px 4px 16px rgb(18 20 22 / 50%);
+  --input-bg: #222222;
+  --file-upload-text: #71737a;
+  --vacancy-submit-btn-bg: #0b0b0b;
+  --vacancy-submit-btn-color: #ffffff;
+  --form-border-color: rgba(135, 135, 135, 0.35);
+}

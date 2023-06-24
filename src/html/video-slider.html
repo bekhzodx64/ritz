@@ -1,0 +1,34 @@
+<div class="video__slider">
+  <div class="video__slider-wrapper">
+    <h2 class="video__subtitle">@@title</h2>
+    <div class="video__slider-nav">
+      <button class="video__slider-btn video__slider-prev">
+        <img src="img/icons/arrow-white.svg" alt="" />
+      </button>
+      <button class="video__slider-btn video__slider-next">
+        <img src="img/icons/arrow-white.svg" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="video__slider-container swiper-container">
+    <ul class="video__slider-list swiper-wrapper">
+      @@for (let i = 8; i > 0; i--) {
+      <li class="video__item swiper-slide">
+        <a href="#">
+          <div class="video__item-img">
+            <img src="img/jurnalist.jpg" alt="" />
+            <div class="video__item-icon">
+              <img src="img/player/play.svg" alt="" />
+            </div>
+          </div>
+          <div class="video__item-info">
+            <p class="video__item-text">800 000 просмотров</p>
+            <p class="video__item-text">12:44/28.03.2023</p>
+          </div>
+          <h3 class="video__item-title">Оқ уй Афғонистондан қўшинларнинг олиб чиқилиши бўйича ҳисобот тайёрлади</h3>
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

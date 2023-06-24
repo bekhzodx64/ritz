@@ -1,0 +1,156 @@
+.site-reels-body {
+  overflow: hidden;
+}
+
+.site-header__top {
+  display: none;
+}
+
+.reels {
+  background: #0b0b0b;
+}
+
+.reels-main {
+  margin-top: 32px;
+  overflow: hidden;
+}
+
+.site-reels {
+  width: 510px;
+  height: calc(100vh - 96px);
+  margin: 0 auto;
+  position: relative;
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: -68px;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(248, 248, 248, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    width: 100% !important;
+    position: relative;
+    // border: 1px solid #fff;
+    border-radius: 10px;
+  }
+
+  &__video {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &__title {
+    font-family: "Noto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    /* or 36px */
+
+    letter-spacing: -0.01em;
+
+    color: #ffffff;
+  }
+
+  &__wrapper {
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__img-mute {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__share {
+    position: absolute;
+    bottom: 0;
+    right: -68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      background-color: rgba(255, 255, 255, 0.24);
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 150%;
+      /* identical to box height, or 21px */
+
+      text-align: center;
+      letter-spacing: -0.01em;
+
+      color: #ffffff;
+    }
+  }
+}
+
+.site-reels__duration {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  width: calc(100% - 16px);
+  height: 4px;
+  // margin: 0 4px;
+  background: rgba(248, 248, 248, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+
+  // &::after {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: $width;
+  //   height: 100%;
+  //   content: "";
+  //   background-color: #ffffff;
+  // }
+}
+
+.site-reels__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  content: "";
+  background-color: #ffffff;
+}

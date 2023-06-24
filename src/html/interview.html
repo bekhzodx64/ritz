@@ -1,0 +1,50 @@
+<div class="interview">
+  <div class="container">
+    <div class="interview__inner">
+      <div class="interview__title-wrapper">
+        <h3 class="interview__top-title">
+          <img
+            class="news__title-icon"
+            src="../img/icons/blue-circle.svg"
+            alt="blue circle"
+            width="12"
+            height="12"
+          />
+          <span>Интервю</span>
+        </h3>
+        <a href="#" class="editor__main-link interview__link"
+          >Барча мақолалар</a
+        >
+      </div>
+      <ul class="interview__list">
+        @@for (let i = 0; i < 4; i++) {
+        <li class="interview__item">
+          <a href="/">
+            <span class="interview__category">#Бизнес</span>
+            <div class="interview__video-wrapper">
+              <video
+                class="interview__video"
+                poster="../img/comunication.jpg"
+                src="../img/test.mp4"
+                muted
+              ></video>
+              <button class="interview__play-btn">
+                <img
+                  class="interview__play-img"
+                  src="../img/icons/interview-icon.svg"
+                  alt="interview play icon"
+                />
+              </button>
+            </div>
+            <time class="interview__time">18:14 / 29.03.2023</time>
+            <h4 class="interview__title">
+              Божлардан вақтинча қутулиш: озиқ-овқат нархлари қандай
+              арзонлаяпти?
+            </h4>
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
