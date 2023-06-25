@@ -180,7 +180,7 @@ a {
 }
 
 .no-webp body {
-  background-image: url("../../img/background.jpg"); }
+  background-image: url("/img/background.jpg"); }
 
 body {
   display: -webkit-box;
@@ -658,6 +658,6 @@ body {
   }
 }
 
-.webp body { background-image: url(../../img/background.webp); }
+.webp body { background-image: url(/img/background.webp); }
 
 .webp .modal-info { background-image: url(/img/modal-bg.webp); }
