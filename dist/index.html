@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<div class="loader">
+		<img
+			src="./img/logo.svg"
+			alt="loader"
+		/>
+	</div>
+
+	<head>
+	<meta charset="UTF-8" />
+	<meta
+		http-equiv="X-UA-Compatible"
+		content="IE=edge"
+	/>
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1.0"
+	/>
+
+	<link
+		rel="preconnect"
+		href="https://fonts.googleapis.com"
+	/>
+	<link
+		rel="preconnect"
+		href="https://fonts.gstatic.com"
+		crossorigin
+	/>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&_v=20230625190439"
+		rel="stylesheet"
+	/>
+
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css?_v=20230625190439"
+	/>
+
+	<link
+		rel="stylesheet"
+		href="css/style.min.css?_v=20230625190439"
+	/>
+	<title>Главная</title>
+</head>
+
+	<body>
+		<header class="header">
+	<div class="logo-container">
+		<a
+			href="/"
+			class="header-logo"
+		>
+			<img
+				src="../img/logo.svg"
+				alt="The Ritz"
+			/>
+		</a>
+	</div>
+
+	<div class="header-actions">
+		<div class="header-socials">
+			<a href="#">
+				<img
+					src="../img/icons/telegram.svg"
+					alt="Telegram"
+				/>
+			</a>
+			<a href="#">
+				<img
+					src="../img/icons/whatsapp.svg"
+					alt="WhatsApp"
+				/>
+			</a>
+		</div>
+
+		<div class="header-phone">
+			<a href="tel:+998971574739">+99897 157 47 39</a>
+		</div>
+	</div>
+</header>
+
+
+		<div class="container sections">
+			<div class="apartments-l2">
+				<button
+					type="button"
+					class="viewer-button"
+					data-image="./img/sphere-images/1.jpg"
+				>
+					<span>l2</span>
+					<span>Apartments</span>
+				</button>
+			</div>
+
+			<div class="apartments-m1">
+				<button
+					type="button"
+					class="viewer-button"
+					data-image="./img/sphere-images/2.jpg"
+				>
+					<span>m1</span>
+					<span>Apartments</span>
+				</button>
+			</div>
+
+			<div class="mansions-m2">
+				<button
+					type="button"
+					class="viewer-button"
+					data-image="./img/sphere-images/3.jpg"
+				>
+					<span>m2</span>
+					<span>Mansions</span>
+				</button>
+			</div>
+
+			<div class="park-p1">
+				<button
+					type="button"
+					class="viewer-button"
+					data-image="./img/sphere-images/4.jpg"
+				>
+					<span>p1</span>
+					<span>Park</span>
+				</button>
+			</div>
+
+			<div class="road-r2">
+				<button
+					type="button"
+					class="viewer-button"
+					data-image="./img/sphere-images/5.jpg"
+				>
+					<span>r2</span>
+					<span>Road</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="brochure">
+	<button
+		class="brochure-button"
+		type="button"
+	>
+		<span>Download brochure</span>
+		<img
+			src="../img/icons/download.svg"
+			alt="download"
+			draggable="false"
+		/>
+	</button>
+</div>
+ <div class="modal">
+	<div class="modal-content">
+		<div class="modal-info">
+			<h2>don't miss the unique offer</h2>
+			<p>
+				Be the first to experience the beauty of Keturah Resort at our exclusive
+				private screening event! Leave your contact information below to receive
+				an invitation to our special event.
+			</p>
+
+			<div class="modal-links">
+				<a href="#">
+					<img
+						src="./img/icons/telegram.svg"
+						alt="Telegram"
+					/>
+					<span>Telegram</span>
+				</a>
+				<a href="#">
+					<img
+						src="./img/icons/whatsapp.svg"
+						alt="WhatsApp"
+					/>
+					<span>WhatsApp</span>
+				</a>
+			</div>
+		</div>
+
+		<form class="modal-form">
+			<input
+				type="text"
+				placeholder="Your name"
+			/>
+			<input
+				type="email"
+				placeholder="Your e-mail"
+			/>
+			<input
+				type="tel"
+				id="phone"
+				placeholder="Phone number"
+			/>
+			<button type="submit">Join now</button>
+		</form>
+
+		<button
+			type="button"
+			class="modal-close"
+		>
+			<img
+				src="../img/icons/close.svg"
+				alt="close"
+				draggable="false"
+			/>
+		</button>
+	</div>
+</div>
+
+		<div class="viewer">
+	<div class="viewer-content">
+		<div class="viewer-info">
+			<div class="viewer-title">
+				<span>2</span>
+				<span>L-Shape</span>
+			</div>
+			<img
+				src="./img/icons/close.svg"
+				alt="close"
+				class="viewer-close"
+			/>
+		</div>
+	</div>
+</div>
+ <script src="https://unpkg.com/imask?_v=20230625190439"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js?_v=20230625190439"></script>
+<script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js?_v=20230625190439"></script>
+
+<script
+	src="js/app.min.js"
+	defer
+></script>
+
+
+		<script>
+			async function showLoader() {
+				const loader = document.querySelector('.loader')
+				loader.style.opacity = 1
+				loader.style.display = 'flex'
+				await wait(1000)
+				loader.style.opacity = 0
+				await wait(1000)
+				loader.style.display = 'none'
+			}
+
+			async function wait(ms) {
+				return new Promise((resolve) => setTimeout(resolve, ms))
+			}
+
+			window.onload = function () {
+				showLoader()
+			}
+		</script>
+	</body>
+</html>
