@@ -34,11 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	const viewerModal = document.querySelector('.viewer')
 	const viewerContent = document.querySelector('.viewer-content')
 	const closeViewerButton = document.querySelector('.viewer-close')
+	const viewerTitle = document.querySelector('.viewer-title')
 
 	let viewer = null
 
 	const openViewerModal = async (event) => {
 		const imageSrc = event.target.dataset.image
+		const title = event.target.querySelector('span:first-child').textContent
+		const subtitle = event.target.querySelector('span:last-child').textContent
+
+		const titleSpan = document.createElement('span')
+		const subtitleSpan = document.createElement('span')
+
+		titleSpan.textContent = title
+		subtitleSpan.textContent = subtitle
+
+		viewerTitle.innerHTML = ''
+		viewerTitle.appendChild(titleSpan)
+		viewerTitle.appendChild(subtitleSpan)
 
 		if (viewer) {
 			viewer.destroy()
