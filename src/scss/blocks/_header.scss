@@ -12,6 +12,11 @@
 		padding-right: 20px;
 		border-right: 1px solid #ffffff25;
 		height: 44px;
+		overflow: hidden;
+
+		@include md {
+			width: 30px;
+		}
 	}
 
 	&-actions {
@@ -19,6 +24,10 @@
 		align-items: center;
 		padding: 0 20px;
 		height: 44px;
+
+		@include md {
+			padding: 0 10px;
+		}
 	}
 
 	&-socials {
@@ -30,6 +39,10 @@
 		border-left: 1px solid #ffffff25;
 		border-right: 1px solid #ffffff25;
 
+		@include md {
+			padding: 0 10px;
+		}
+
 		a {
 			user-select: none;
 		}
@@ -38,9 +51,17 @@
 	&-phone {
 		padding-left: 15px;
 
+		@include md {
+			padding-left: 10px;
+		}
+
 		a {
 			color: #fff;
 			font-size: 18px;
+
+			@include md {
+				font-size: 14px;
+			}
 		}
 	}
 }
