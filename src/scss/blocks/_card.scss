@@ -1,4 +1,0 @@
-.card__item {
-  @include flex(row, stretch, space-between, nowrap, flex);
-  flex-direction: column;
-}

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+	<div class="loader">
+		<img
+			src="./img/logo.svg"
+			alt="loader"
+		/>
+	</div>
+
 	@@include('html/head.html',{ "title":"Главная" })
 	<body>
 		@@include('html/header.html')
@@ -63,5 +70,25 @@
 
 		@@include('html/brochure-button.html') @@include('html/brochure-modal.html')
 		@@include('html/viewer.html') @@include('html/scripts.html')
+
+		<script>
+			async function showLoader() {
+				const loader = document.querySelector('.loader')
+				loader.style.opacity = 1
+				loader.style.display = 'flex'
+				await wait(1000)
+				loader.style.opacity = 0
+				await wait(1000)
+				loader.style.display = 'none'
+			}
+
+			async function wait(ms) {
+				return new Promise((resolve) => setTimeout(resolve, ms))
+			}
+
+			window.onload = function () {
+				showLoader()
+			}
+		</script>
 	</body>
 </html>
