@@ -6,63 +6,64 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	new IMask(telInput, telMaskOptions)
 
-	// Модальное окно
+	// Модальное окно формы
 	const modal = document.querySelector('.modal')
 	const openModalBtn = document.querySelector('.brochure-button')
 	const closeModalBtn = document.querySelector('.modal-close')
 
 	const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-	// TOOD: style togirlash kk
-	const toggleModal = async () => {
-		if (modal.style.display === 'none') {
-			modal.style.opacity = '0'
-			modal.style.display = 'flex'
-			await wait(50)
-			modal.style.opacity = '1'
-		} else {
-			modal.style.opacity = '0'
-			await wait(500)
-			modal.style.display = 'none'
-		}
+	const openModal = async () => {
+		modal.style.opacity = '0'
+		modal.style.display = 'flex'
+		await wait(50)
+		modal.style.opacity = '1'
 	}
 
-	openModalBtn.onclick = toggleModal
-	closeModalBtn.onclick = toggleModal
+	const closeModal = async () => {
+		modal.style.opacity = '0'
+		await wait(500)
+		modal.style.display = 'none'
+	}
 
-	// Photo Sphere viewer
-	// new PhotoSphereViewer.Viewer({
-	// 	container: document.querySelector('#viewer'),
-	// 	panorama: '../../img/sphere-images/3.jpg',
-	// })
+	openModalBtn.onclick = openModal
+	closeModalBtn.onclick = closeModal
 
-	// Viewer Buttons
+	// Viewer Photosphere Modal
 	const viewerButtons = document.querySelectorAll('.viewer-button')
 	const viewerModal = document.querySelector('.viewer')
+	const viewerContent = document.querySelector('.viewer-content')
 	const closeViewerButton = document.querySelector('.viewer-close')
 
-	const toggleViewerModal = async () => {
-		if (viewerModal.style.display === 'none') {
-			viewerModal.style.opacity = '0'
-			viewerModal.style.display = 'flex'
-			await wait(50)
-			viewerModal.style.opacity = '1'
-		} else {
-			viewerModal.style.opacity = '0'
-			await wait(500)
-			viewerModal.style.display = 'none'
+	let viewer = null
+
+	const openViewerModal = async (event) => {
+		const imageSrc = event.target.dataset.image
+
+		if (viewer) {
+			viewer.destroy()
 		}
+
+		viewer = new PhotoSphereViewer.Viewer({
+			container: viewerContent,
+			panorama: imageSrc,
+		})
+
+		viewerModal.style.opacity = '0'
+		viewerModal.style.display = 'flex'
+		await wait(50)
+		viewerModal.style.opacity = '1'
 	}
 
-	// const image1 = '../../img/sphere-images/1.jpg'
-	// const image2 = '../../img/sphere-images/2.jpg'
-	// const image3 = '../../img/sphere-images/3.jpg'
-	// const image4 = '../../img/sphere-images/4.jpg'
-	// const image5 = '../../img/sphere-images/5.jpg'
+	const closeViewerModal = async () => {
+		viewerModal.style.opacity = '0'
+		await wait(500)
+		viewerModal.style.display = 'none'
+	}
 
 	viewerButtons.forEach((button) => {
-		button.onclick = toggleViewerModal
+		button.onclick = openViewerModal
 	})
 
-	closeViewerButton.onclick = toggleViewerModal
+	closeViewerButton.onclick = closeViewerModal
 })
