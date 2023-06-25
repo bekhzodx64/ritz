@@ -275,7 +275,7 @@ body {
 }
 
 .no-webp .modal-info {
-  background-image: url("./img/modal-bg.jpg"); }
+  background-image: url("/img/modal-bg.jpg"); }
 
 .modal-info {
   display: -webkit-box;
@@ -660,4 +660,4 @@ body {
 
 .webp body { background-image: url(../../img/background.webp); }
 
-.webp .modal-info { background-image: url(./img/modal-bg.webp); }
+.webp .modal-info { background-image: url(/img/modal-bg.webp); }
