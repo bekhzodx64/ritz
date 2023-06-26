@@ -180,7 +180,7 @@ a {
 }
 
 .no-webp body {
-  background-image: url("/img/background.jpg"); }
+  background-image: url("../img/background.jpg"); }
 
 body {
   display: -webkit-box;
@@ -193,7 +193,9 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #000000;
   padding: 30px;
+  overflow-y: auto;
 }
 
 .brochure {
@@ -237,6 +239,8 @@ body {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  padding: 50px;
+  overflow-y: auto;
 }
 
 .modal.hidden {
@@ -272,6 +276,7 @@ body {
   max-width: 914px;
   background-color: #000;
   position: relative;
+  margin: auto;
 }
 
 .no-webp .modal-info {
@@ -614,6 +619,21 @@ body {
   font-weight: 500;
 }
 
+.mobile {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
 @media only screen and (max-width: 1600px) {
   .container {
     max-width: 1399px;
@@ -656,8 +676,103 @@ body {
   body {
     padding: 20px;
   }
+
+  .modal-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 500px;
+  }
+
+  .modal-info {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .modal-form {
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  .sections {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.webp body { background-image: url(/img/background.webp); }
+@media only screen and (max-width: 767px) {
+  .brochure-button {
+    margin: 0 auto;
+  }
+
+  .modal {
+    padding: 40px;
+  }
+
+  .modal-info {
+    padding: 10px;
+  }
+
+  .modal-info h2 {
+    font-size: 30px;
+  }
+
+  .modal-info p {
+    font-size: 12px;
+  }
+
+  .modal-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-links a {
+    font-size: 12px;
+  }
+
+  .modal-form {
+    padding: 20px;
+  }
+
+  .modal-form input {
+    font-size: 14px;
+  }
+
+  .modal-form button {
+    font-size: 14px;
+  }
+
+  .sections .apartments-l2 {
+    display: none;
+  }
+
+  .sections .apartments-m1 {
+    display: none;
+  }
+
+  .sections .mansions-m2 {
+    display: none;
+  }
+
+  .sections .park-p1 {
+    display: none;
+  }
+
+  .sections .road-r2 {
+    display: none;
+  }
+
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.webp body { background-image: url(../img/background.webp); }
 
 .webp .modal-info { background-image: url(/img/modal-bg.webp); }

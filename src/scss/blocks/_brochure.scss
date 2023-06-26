@@ -14,5 +14,9 @@
 		cursor: pointer;
 		padding: 6px 30px;
 		user-select: none;
+
+		@include sm {
+			margin: 0 auto;
+		}
 	}
 }
